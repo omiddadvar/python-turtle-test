@@ -1,15 +1,7 @@
 import turtle
 
 def get_user_choices():
-    """ Build a dictionary of user choices for f """
-    
-    #initilize dictionary
-    userChoicesConfigs = {
-        "shape" : "turtle",
-        "level" : 3,
-        "branches" : 3,
-        "length" : 50,
-    }
+    """ Build a dictionary of user choices for circular-fractal drawing """
     #get number of levels for the fractal
     level = 0
     while level not in range(1,10) :
@@ -33,9 +25,6 @@ def get_user_choices():
         length = int(length)
         if length in range(1,30) :
             userChoicesConfigs["length"] = length
-    
-    #return the user-choice-confgis for the fractal
-    return userChoicesConfigs
 
 
 def draw_fractal(drawingConfigs):
@@ -78,6 +67,14 @@ def draw_fractal(drawingConfigs):
 #instructions 
 print("Hello this program will draw you a circular-fractal shape")
 
+#initilize dictionary
+userChoicesConfigs = {
+    "shape" : "turtle",
+    "level" : 3,
+    "branches" : 3,
+    "length" : 50,
+}
+
 #initial configs for program 
 drawinf_serface = turtle.Screen()
 turtle.color("blue")
@@ -85,7 +82,7 @@ turtle.speed(0)
 turtle.left(90)
 
 #get user input to draw fractal
-userChoices = get_user_choices()
+get_user_choices()
 
 #call fractal-drawer function
 draw_fractal(userChoices)
