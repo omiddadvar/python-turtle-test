@@ -88,7 +88,6 @@ def onclick_action(x , y):
 
 
 def set_onclick_listener() :
-    # turtle.onclick(onclick_action) 
     screen.onclick(onclick_action) 
     screen.mainloop()
 
@@ -140,5 +139,3 @@ if username is not None :
     print_instruction_message(welcomeScreenConfigs ,instructionMessageConfig)
 
     set_onclick_listener()
-
-#screen.exitonclick()
